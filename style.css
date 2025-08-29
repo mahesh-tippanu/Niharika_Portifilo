@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f0ff;
+  color: #2c2c2c;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #8a6bb8;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: #5e429b;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  color: #3a3a3a;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+header {
+  background: #8a6bb8;
+  color: white;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic:hover {
+  transform: scale(1.15);
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.intro-message {
+  background: #e7e2f3;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.signature {
+  font-style: italic;
+  font-family: 'Dancing Script', cursive;
+  color: #5c4080;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.hero {
+  background: #f3eaff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero span {
+  color: #6e4fa3;
+}
+
+section {
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-left: 5px solid #8a6bb8;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  background: #8a6bb8;
+  color: white;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: white;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  background: #8a6bb8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.btn {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #8a6bb8;
+  font-weight: 600;
+}
+
+.closing {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Falling hearts/petals */
+.falling {
+  font-size: 2rem;
+  position: fixed;
+  animation: fall 10s linear infinite;
+  top: -5%;
+  left: calc(100% * var(--x));
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 1;
+  }
+}
